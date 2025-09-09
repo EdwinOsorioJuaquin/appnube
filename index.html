@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uber & Cloud — Presentación</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: {900: '#0B1020',800: '#0F1428',700: '#131A33',600: '#1C2444',500: '#263059'},
+            accent: {500: '#10b981',400: '#34d399',300: '#6ee7b7'}
+          },
+          boxShadow: {glow: '0 0 0 1px rgba(16,185,129,.4), 0 10px 40px -10px rgba(16,185,129,.4)'}
+        }
+      }
+    }
+  </script>
+  <style>
+    .radial-bg {background: radial-gradient(1200px 600px at 10% -10%, rgba(52,211,153,0.18), transparent 60%),radial-gradient(1200px 600px at 110% -10%, rgba(59,130,246,0.18), transparent 60%),radial-gradient(900px 500px at 50% 120%, rgba(37,99,235,0.12), transparent 60%);} 
+    .glass {backdrop-filter: blur(8px);-webkit-backdrop-filter: blur(8px);background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border: 1px solid rgba(255,255,255,0.08);} 
+  </style>
+</head>
+<body class="min-h-screen bg-base-900 text-slate-200 radial-bg">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-base-900/70 glass">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-accent-500/20 text-accent-300 shadow-glow group-hover:bg-accent-500/30 transition">
+          <!-- simple spark icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="translate-y-[1px]">
+            <path d="M12 2l2.2 4.6L19 8l-4 3.8L16 18l-4-2.4L8 18l1.9-6.2L6 8l4.8-1.4L12 2z" fill="currentColor"/>
+          </svg>
+        </span>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-slate-400">Aplicaciones en la Nube</p>
+          <h1 class="font-semibold">Uber & Cloud</h1>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#intro" class="px-3 py-2 rounded-lg hover:bg-base-700/60">Intro</a>
+        <a href="#secciones" class="px-3 py-2 rounded-lg hover:bg-base-700/60">Secciones</a>
+        <a href="#galeria" class="px-3 py-2 rounded-lg hover:bg-base-700/60">Galería</a>
+      </div>
+      <button id="btnScrollTop" class="md:hidden px-3 py-2 rounded-lg bg-accent-500/20 text-accent-300">↑</button>
+    </nav>
+  </header>
+
+  <!-- HERO / INTRO -->
+  <section id="inicio" class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-10 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+          Modelo de Negocio de <span class="text-accent-300">Uber</span> & su plataforma <span class="text-accent-300">Cloud</span>
+        </h2>
+        <p class="mt-5 text-slate-300/90 text-lg leading-relaxed">
+          Esta página resume cómo Uber opera como <em>plataforma de dos lados</em> (pasajeros & conductores),
+          y cómo usa servicios en la nube para escalar: despliegue global, cómputo elástico, almacenamiento de datos,
+          análisis en tiempo real, seguridad y observabilidad.
+        </p>
+        <ul class="mt-6 space-y-2 text-slate-300/90">
+          <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-accent-400"></span> Emparejamiento en tiempo real (matching) con precios dinámicos.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-accent-400"></span> Microservicios y APIs sobre infraestructura cloud (autoscaling & balanceo).</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-accent-400"></span> Observabilidad (logs, métricas, trazas) y Data Lake para analítica.</li>
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#secciones" class="px-5 py-3 rounded-xl bg-accent-500 text-base-900 font-semibold hover:shadow-glow transition">Ver secciones</a>
+          <a href="#galeria" class="px-5 py-3 rounded-xl bg-base-700 hover:bg-base-600 border border-white/10">Abrir galería</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[16/10] rounded-2xl glass border border-white/10 p-6 shadow-xl">
+          <div class="grid grid-cols-3 gap-4 h-full">
+            <div class="col-span-2 space-y-4">
+              <div class="h-24 rounded-xl bg-gradient-to-br from-accent-500/30 to-blue-500/20 border border-white/10 flex items-center justify-between px-5">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-slate-400">Servicio</p>
+                  <p class="font-semibold">Ride-hailing</p>
+                </div>
+                <span class="text-accent-300">●●●</span>
+              </div>
+              <div class="h-24 rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 border border-white/10 flex items-center justify-between px-5">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-slate-400">Cloud</p>
+                  <p class="font-semibold">Microservicios</p>
+                </div>
+                <span class="text-accent-300">API</span>
+              </div>
+              <div class="h-24 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-white/10 flex items-center justify-between px-5">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-slate-400">Data</p>
+                  <p class="font-semibold">Streaming & ML</p>
+                </div>
+                <span class="text-accent-300">⚡</span>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="h-24 rounded-xl bg-base-700/70 border border-white/10 flex items-center justify-center text-slate-300">Eats / Freight</div>
+              <div class="h-24 rounded-xl bg-base-700/70 border border-white/10 flex items-center justify-center text-slate-300">Payments</div>
+              <div class="h-24 rounded-xl bg-base-700/70 border border-white/10 flex items-center justify-center text-slate-300">Observability</div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-xs text-slate-400">Mockup ilustrativo de componentes — no funcional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIONES PRINCIPALES -->
+  <section id="secciones" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6">Secciones del trabajo</h3>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Mapa Conceptual -->
+      <article class="group relative rounded-2xl overflow-hidden border border-white/10 glass">
+        <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xl font-semibold">Mapa Conceptual</h4>
+            <span class="text-xs text-slate-400">Imagen</span>
+          </div>
+          <p class="mt-2 text-slate-300/90">Resumen visual del modelo de negocio de Uber (plataforma, socios clave, segmentos, propuesta de valor, ingresos y costos).</p>
+        </div>
+        <button data-img="assets/mapa_conceptual_uber.jpeg" class="openImage w-full aspect-[16/10] bg-base-700 hover:opacity-90 transition flex items-center justify-center">
+          <span class="text-slate-400">📌 Clic para ver el mapa (reemplaza <code>assets/mapa_conceptual_uber.jpeg</code>)</span>
+        </button>
+      </article>
+
+      <!-- Página Web (link externo) -->
+      <article class="group relative rounded-2xl overflow-hidden border border-white/10 glass">
+        <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xl font-semibold">Página Web</h4>
+            <span class="text-xs text-slate-400">En producción</span>
+          </div>
+          <p class="mt-2 text-slate-300/90">Accede a la demo desplegada en la nube.</p>
+        </div>
+        <a href="https://ridewave-aplicaci-n-84ip.bolt.host/" target="_blank" rel="noopener" class="block w-full aspect-[16/10] bg-gradient-to-br from-accent-500/25 to-blue-500/25 hover:from-accent-500/35 hover:to-blue-500/35 transition flex items-center justify-center">
+          <span class="font-semibold text-accent-300">Abrir sitio →</span>
+        </a>
+      </article>
+
+      <!-- Infografía -->
+      <article class="group relative rounded-2xl overflow-hidden border border-white/10 glass">
+        <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xl font-semibold">Infografía</h4>
+            <span class="text-xs text-slate-400">Imagen</span>
+          </div>
+          <p class="mt-2 text-slate-300/90">Infografía con KPIs clave, flujo de valor y componentes tecnológicos en cloud.</p>
+        </div>
+        <button data-img="assets/infografia_uber.jpeg" id="btnInfo" class="openImage w-full aspect-[16/10] bg-base-700 hover:opacity-90 transition flex items-center justify-center">
+          <span class="text-slate-400">🖼️ Clic para ver la infografía (reemplaza <code>assets/infografia_uber.jpeg</code>)</span>
+        </button>
+      </article>
+    </div>
+
+    <!-- Notas de integración -->
+    <div class="mt-8 rounded-2xl border border-white/10 glass p-5">
+      <h5 class="font-semibold mb-2">Cómo integrar tus imágenes</h5>
+      <ol class="list-decimal list-inside text-slate-300/90 space-y-1">
+        <li>Coloca tus archivos en <code>/assets/</code> junto a este HTML (por ejemplo: <code>assets/mapa_conceptual_uber.jpeg</code> y <code>assets/infografia_uber.jpeg</code>).</li>
+        <li>Haz clic en las tarjetas para abrirlas en un visor modal.</li>
+        <li>Puedes cambiar los nombres de archivo sin tocar el JS: usa el atributo <code>data-img</code> de cada botón.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GALERÍA / LIGHTBOX -->
+  <section id="galeria" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6">Galería rápida</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <button data-img="assets/mapa_conceptual_uber.jpeg" id="galMapa" class="openImage aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-base-700/60">
+        <img id="imgMapa" src="assets/mapa_conceptual_uber.jpeg" alt="Mapa conceptual de Uber" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition" onerror="this.closest('button').classList.add('flex','items-center','justify-center');this.remove();this.closest('button').innerHTML='(Sube tu mapa a <code>assets/mapa_conceptual_uber.jpeg</code>)'">
+      </button>
+      <button data-img="assets/infografia_uber.jpeg" id="galInfo" class="openImage aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-base-700/60">
+        <img id="imgInfo" src="assets/infografia_uber.jpeg" alt="Infografía de Uber" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition" onerror="this.closest('button').classList.add('flex','items-center','justify-center');this.remove();this.closest('button').innerHTML='(Sube tu infografía a <code>assets/infografia_uber.jpeg</code>)'">
+      </button>
+    </div>
+  </section>
+
+    <!-- MODAL VISOR -->
+  <div id="viewer" class="fixed inset-0 z-[60] hidden bg-black/80 place-items-center p-4">
+    <div class="relative w-full max-w-6xl max-h-[90vh] overflow-hidden">
+      <button id="closeViewer" class="absolute -top-10 right-0 px-3 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20">Cerrar ✕</button>
+      <div id="viewerWrapper" class="w-full h-full">
+        <img id="viewerImg" src="" alt="Vista ampliada" class="w-full h-auto rounded-xl shadow-2xl border border-white/10" />
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-base-800/70">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-400 flex flex-wrap items-center justify-between gap-4">
+      <p>Trabajo: <strong>Aplicaciones en la Nube</strong> · Tema: <strong>Uber & Cloud</strong></p>
+      <p>Diseño oscuro, TailwindCSS · Single-file</p>
+    </div>
+  </footer>
+
+  <script>
+    const viewer = document.getElementById('viewer');
+    const viewerImg = document.getElementById('viewerImg');
+    const viewerWrapper = document.getElementById('viewerWrapper');
+    const closeViewer = document.getElementById('closeViewer');
+
+    function openViewer(src, scrollable){
+      viewerImg.src = src;
+      if(scrollable){
+        viewerWrapper.classList.add('overflow-y-auto','max-h-[85vh]');
+      } else {
+        viewerWrapper.classList.remove('overflow-y-auto','max-h-[85vh]');
+      }
+      viewer.classList.remove('hidden');
+    }
+    function hideViewer(){viewer.classList.add('hidden');viewerImg.src='';}
+
+    document.querySelectorAll('.openImage').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.getAttribute('data-img');
+        const isInfo = btn.getAttribute('id') === 'btnInfo' || btn.getAttribute('id') === 'galInfo';
+        openViewer(src, isInfo);
+      });
+    });
+    closeViewer.addEventListener('click', hideViewer);
+    viewer.addEventListener('click', (e) => { if (e.target === viewer) hideViewer(); });
+
+    // Manejo de parámetros con extensiones .jpeg
+    function getParam(name){return new URL(window.location.href).searchParams.get(name);} 
+    const mapaParam = getParam('mapa');
+    const infoParam = getParam('info');
+    const bust = Date.now();
+
+    if (mapaParam) {
+      document.querySelectorAll('[data-img="assets/mapa_conceptual_uber.png"], [data-img="assets/mapa_conceptual_uber.jpg"], [data-img="assets/mapa_conceptual_uber.jpeg"]').forEach(el=> el.setAttribute('data-img', mapaParam));
+      const imgMapa = document.getElementById('imgMapa');
+      if (imgMapa) imgMapa.src = mapaParam + '?v=' + bust;
+    }
+    if (infoParam) {
+      document.querySelectorAll('[data-img="assets/infografia_uber.png"], [data-img="assets/infografia_uber.jpg"], [data-img="assets/infografia_uber.jpeg"]').forEach(el=> el.setAttribute('data-img', infoParam));
+      const imgInfo = document.getElementById('imgInfo');
+      if (imgInfo) imgInfo.src = infoParam + '?v=' + bust;
+      const btnInfo = document.getElementById('btnInfo');
+      if (btnInfo) btnInfo.setAttribute('data-img', infoParam);
+    }
+  </script>
+</body>
+</html>
